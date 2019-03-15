@@ -13,6 +13,9 @@ The usage is simple. Just add a string to the set, and ask for it later by using
    val a = FuzzySet()
    a.add("michael axiak")
    a.get("micael asiak") // will be [Item(0.8461538461538461, 'michael axiak')]
+   // OR
+   val b = FuzzySet(arrayOf("michael axiak"))
+   b.get("micael asiak") // will be [Item(0.8461538461538461, 'michael axiak')]
 ```
 The result will be an array of ``Item(score, matched_value)`` objects.
 The score is between 0 and 1, with 1 being a perfect match.
